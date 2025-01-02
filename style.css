@@ -1,0 +1,208 @@
+:root {
+    --primary-color: #2563eb;
+    --hover-color: #1d4ed8;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+}
+
+body {
+    background-color: var(--bg-color);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.container {
+    flex: 1;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.card-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.site-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.site-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.site-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+.site-item:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.site-item:hover::before {
+    opacity: 0.05;
+}
+
+.site-item i {
+    font-size: 28px;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.site-item:hover i {
+    transform: scale(1.1);
+}
+
+.site-item span {
+    font-size: 0.875rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+/* 添加深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+    }
+    
+    .card {
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .site-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .site-item {
+        padding: 0.75rem;
+    }
+    
+    .site-item i {
+        font-size: 24px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+/* 添加页面加载动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.col-md-6:nth-child(1) .card { animation-delay: 0.1s; }
+.col-md-6:nth-child(2) .card { animation-delay: 0.2s; }
+.col-md-6:nth-child(3) .card { animation-delay: 0.3s; }
+.col-md-6:nth-child(4) .card { animation-delay: 0.4s; }
+.col-md-6:nth-child(5) .card { animation-delay: 0.5s; }
