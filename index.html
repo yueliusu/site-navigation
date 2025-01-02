@@ -3,150 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网站导航</title>
+    <title>网站导航 | 简洁·高效</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- 使用 Bootstrap 图标库 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center my-4">网站导航</h1>
-        
-        <div class="row">
-            <!-- 常用工具 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">常用工具</h5>
-                        <div class="site-grid">
-                            <a href="https://www.google.com" target="_blank" class="site-item">
-                                <i class="bi bi-google"></i>
-                                <span>Google</span>
-                            </a>
-                            <a href="https://github.com" target="_blank" class="site-item">
-                                <i class="bi bi-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://mail.google.com" target="_blank" class="site-item">
-                                <i class="bi bi-envelope"></i>
-                                <span>Gmail</span>
-                            </a>
+    <div class="site-container">
+        <!-- 左侧导航栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="header-content">
+                    <h3></h3>
+                    <button class="toggle-sidebar" aria-label="收起侧边栏">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#tools" class="active">
+                            <i class="bi bi-tools"></i>
+                            <span>常用工具</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#entertainment">
+                            <i class="bi bi-play-circle"></i>
+                            <span>娱乐放松</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#study">
+                            <i class="bi bi-book"></i>
+                            <span>学习成长</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#forum">
+                            <i class="bi bi-chat-dots"></i>
+                            <span>社区交流</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#shopping">
+                            <i class="bi bi-cart"></i>
+                            <span>购物天地</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#anime">
+                            <i class="bi bi-collection-play"></i>
+                            <span>动漫世界</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 主要内容区域 -->
+        <main class="main-content">
+            <div class="row">
+                <!-- 常用工具 -->
+                <div class="col-md-6 mb-4" id="tools">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="bi bi-tools"></i>
+                                常用工具
+                            </h5>
+                            <div class="site-grid">
+                                <a href="https://www.google.com" target="_blank" class="site-item" data-tooltip="Google搜索">
+                                    <i class="bi bi-google"></i>
+                                    <span>Google</span>
+                                </a>
+                                <a href="https://github.com" target="_blank" class="site-item" data-tooltip="代码托管">
+                                    <i class="bi bi-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://mail.google.com" target="_blank" class="site-item" data-tooltip="邮件服务">
+                                    <i class="bi bi-envelope"></i>
+                                    <span>Gmail</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 娱乐 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">娱乐</h5>
-                        <div class="site-grid">
-                            <a href="https://www.youtube.com" target="_blank" class="site-item">
-                                <i class="bi bi-youtube"></i>
-                                <span>YouTube</span>
-                            </a>
-                            <a href="https://music.163.com" target="_blank" class="site-item">
-                                <i class="bi bi-music-note-beamed"></i>
-                                <span>网易云音乐</span>
-                            </a>
-                            <a href="https://www.bilibili.com" target="_blank" class="site-item">
+                <!-- 娱乐 -->
+                <div class="col-md-6 mb-4" id="entertainment">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
                                 <i class="bi bi-play-circle"></i>
-                                <span>Bilibili</span>
-                            </a>
+                                娱乐放松
+                            </h5>
+                            <div class="site-grid">
+                                <a href="https://www.youtube.com" target="_blank" class="site-item" data-tooltip="视频平台">
+                                    <i class="bi bi-youtube"></i>
+                                    <span>YouTube</span>
+                                </a>
+                                <a href="https://music.163.com" target="_blank" class="site-item" data-tooltip="音乐平台">
+                                    <i class="bi bi-music-note-beamed"></i>
+                                    <span>网易云音乐</span>
+                                </a>
+                                <a href="https://www.bilibili.com" target="_blank" class="site-item" data-tooltip="视频平台">
+                                    <i class="bi bi-play-circle"></i>
+                                    <span>Bilibili</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 学习 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">学习</h5>
-                        <div class="site-grid">
-                            <a href="https://www.zhihu.com" target="_blank" class="site-item">
-                                <i class="bi bi-question-circle"></i>
-                                <span>知乎</span>
-                            </a>
-                            <a href="https://stackoverflow.com" target="_blank" class="site-item">
-                                <i class="bi bi-stack"></i>
-                                <span>Stack Overflow</span>
-                            </a>
-                            <a href="https://juejin.cn" target="_blank" class="site-item">
+                <!-- 学习 -->
+                <div class="col-md-6 mb-4" id="study">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
                                 <i class="bi bi-book"></i>
-                                <span>掘金</span>
-                            </a>
+                                学习成长
+                            </h5>
+                            <div class="site-grid">
+                                <a href="https://www.zhihu.com" target="_blank" class="site-item" data-tooltip="知识社区">
+                                    <i class="bi bi-question-circle"></i>
+                                    <span>知乎</span>
+                                </a>
+                                <a href="https://stackoverflow.com" target="_blank" class="site-item" data-tooltip="编程问答">
+                                    <i class="bi bi-stack"></i>
+                                    <span>Stack Overflow</span>
+                                </a>
+                                <a href="https://juejin.cn" target="_blank" class="site-item" data-tooltip="技术社区">
+                                    <i class="bi bi-book"></i>
+                                    <span>掘金</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 论坛 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">论坛</h5>
-                        <div class="site-grid">
-                            <a href="https://linux.do" target="_blank" class="site-item">
-                                <i class="bi bi-terminal"></i>
-                                <span>Linux.do</span>
-                            </a>
+                <!-- 论坛 -->
+                <div class="col-md-6 mb-4" id="forum">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="bi bi-chat-dots"></i>
+                                社区交流
+                            </h5>
+                            <div class="site-grid">
+                                <a href="https://linux.do" target="_blank" class="site-item" data-tooltip="Linux社区">
+                                    <i class="bi bi-terminal"></i>
+                                    <span>Linux.do</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 购物 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">购物</h5>
-                        <div class="site-grid">
-                            <a href="https://www.taobao.com" target="_blank" class="site-item">
-                                <i class="bi bi-bag"></i>
-                                <span>淘宝</span>
-                            </a>
-                            <a href="https://www.jd.com" target="_blank" class="site-item">
-                                <i class="bi bi-shop"></i>
-                                <span>京东</span>
-                            </a>
+                <!-- 购物 -->
+                <div class="col-md-6 mb-4" id="shopping">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="bi bi-cart"></i>
+                                购物天地
+                            </h5>
+                            <div class="site-grid">
+                                <a href="https://www.taobao.com" target="_blank" class="site-item" data-tooltip="综合购物">
+                                    <i class="bi bi-bag"></i>
+                                    <span>淘宝</span>
+                                </a>
+                                <a href="https://www.jd.com" target="_blank" class="site-item" data-tooltip="综合购物">
+                                    <i class="bi bi-shop"></i>
+                                    <span>京东</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 动漫 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">动漫</h5>
-                        <div class="site-grid">
-                            <a href="https://www.bilibili.com/anime/" target="_blank" class="site-item">
-                                <i class="bi bi-play-circle"></i>
-                                <span>哔哩哔哩番剧</span>
-                            </a>
-                            <a href="https://www.agemys.net/" target="_blank" class="site-item">
+                <!-- 动漫 -->
+                <div class="col-md-6 mb-4" id="anime">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
                                 <i class="bi bi-collection-play"></i>
-                                <span>AGE动漫</span>
-                            </a>
-                            <a href="https://mikanani.me/" target="_blank" class="site-item">
-                                <i class="bi bi-download"></i>
-                                <span>蜜柑计划</span>
-                            </a>
-                            <a href="https://www.anfuns.cc/" target="_blank" class="site-item">
-                                <i class="bi bi-film"></i>
-                                <span>AnFuns</span>
-                            </a>
+                                动漫世界
+                            </h5>
+                            <div class="site-grid">
+                                <a href="https://www.bilibili.com/anime/" target="_blank" class="site-item" data-tooltip="番剧">
+                                    <i class="bi bi-play-circle"></i>
+                                    <span>哔哩哔哩番剧</span>
+                                </a>
+                                <a href="https://www.agemys.net/" target="_blank" class="site-item" data-tooltip="动漫">
+                                    <i class="bi bi-collection-play"></i>
+                                    <span>AGE动漫</span>
+                                </a>
+                                <a href="https://mikanani.me/" target="_blank" class="site-item" data-tooltip="下载">
+                                    <i class="bi bi-download"></i>
+                                    <span>蜜柑计划</span>
+                                </a>
+                                <a href="https://www.anfuns.cc/" target="_blank" class="site-item" data-tooltip="动漫">
+                                    <i class="bi bi-film"></i>
+                                    <span>AnFuns</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <footer>
+                <p class="text-center"> 2024 Code_流苏. All rights reserved.</p>
+            </footer>
+        </main>
     </div>
-    <footer class="text-center py-4 mt-4">
-        <p class="text-muted"> 2024 Code_流苏. All rights reserved.</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
